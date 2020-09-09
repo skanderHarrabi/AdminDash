@@ -1,0 +1,120 @@
+<div class="card">
+    <div class="card-body">
+        <!-- title -->
+        <div class="d-md-flex align-items-center">
+            <div>
+                <h4 class="card-title">packages les plus vendus</h4>
+                <h5 class="card-subtitle">aperçu packages les plus vendus</h5>
+            </div>
+            <div class="ml-auto">
+                <div class="dl">
+                    <select class="custom-select">
+                        <option value="0" selected>Monthly</option>
+                        <option value="1">Daily</option>
+                        <option value="2">Weekly</option>
+                        <option value="3">Yearly</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- title -->
+    </div>
+    <div class="table-responsive">
+        <table class="table v-middle">
+            <thead>
+                <tr class="bg-light">
+                    <th class="border-top-0">Package</th>
+                    <th class="border-top-0">Fournisseur</th>
+                    <th class="border-top-0">nombre de ventes</th>
+                    <th class="border-top-0">Domaine</th>
+                    <th class="border-top-0">Profit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf='details[0]'>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="m-r-10">
+                                <a class="btn btn-circle btn-info text-white">P1</a>
+                            </div>
+                            <div class="">
+                                <h4 class="m-b-0 font-16">{{details[0].package}}</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td>{{details[0].fournisseur}}</td>
+                    <td>{{details[0].occu}}</td>
+                    <td>
+                        <label class="label label-danger">{{details[0].domaine}}</label>
+                    </td>
+                    <td>
+                        <h5 class="m-b-0">{{details[0].price}} dt</h5>
+                    </td>
+                </tr>
+                <tr  *ngIf='details[1]'>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="m-r-10">
+                                <a class="btn btn-circle btn-orange text-white">P2</a>
+                            </div>
+                            <div class="">
+                                <h4 class="m-b-0 font-16">{{details[1].package}}</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td>{{details[1].fournisseur}}</td>
+                    <td>{{details[1].occu}}</td>
+                    <td>
+                        <label class="label label-info">{{details[1].domaine}}</label>
+                    </td>
+                    
+                    <td>
+                        <h5 class="m-b-0">{{details[1].price}} dt</h5>
+                    </td>
+                </tr>
+                <tr  *ngIf='details[2]'>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="m-r-10">
+                                <a class="btn btn-circle btn-success text-white">P3</a>
+                            </div>
+                            <div class="">
+                                <h4 class="m-b-0 font-16">{{details[2].package}}</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td>{{details[2].fournisseur}}</td>
+                    <td>{{details[2].occu}}</td>
+                    <td>
+                        <label class="label label-success">{{details[2].domaine}}</label>
+                    </td>
+                    
+                    <td>
+                        <h5 class="m-b-0">{{details[2].price}} dt</h5>
+                    </td>
+                </tr>
+                <tr  *ngIf='details[3]'>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="m-r-10">
+                                <a class="btn btn-circle btn-purple text-white">P3</a>
+                            </div>
+                            <div class="">
+                                <h4 class="m-b-0 font-16">{{details[3].package}}</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td>{{details[3].fournisseur}}</td>
+                    <td>{{details[3].occu}}</td>
+                    <td>
+                        <label class="label label-purple">{{details[3].domaine}}</label>
+                    </td>
+     
+                    <td>
+                        <h5 class="m-b-0">{{details[3].price}} dt</h5>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

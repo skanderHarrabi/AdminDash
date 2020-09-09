@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card bg-light">
+            <div class="card-body">
+                <div class="d-flex no-block align-items-center m-b-10">
+                    <h4 class="card-title">Details des clients</h4>
+                </div>
+                <div class="table-responsive">
+                    <table class="table bg-white table-bordered nowrap display">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Email</th>
+                                <th>Adresse</th>
+                                <th>Tel</th>
+                                <th>Date d'achat</th>
+                                <th>Nombre d'achat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor='let item of clients'>
+                                
+                                <td>
+                                    <a href="javscript:void(0)">
+                                        {{item.client.firstName}} {{item.client.lastName}}
+                                    </a>
+                                </td>
+                                <td>{{item.client.mail}}</td>
+                                <td>{{item.client.adress}}</td>
+                                <td>{{item.client.phone}}</td>
+                                <td>{{item.date.substring(0,10)}}</td>
+                                <td>{{item.occ}}</td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
